@@ -5,8 +5,8 @@ namespace AAA_HOMEWORK.Scripts
 {
     public class Chess_Init : MonoBehaviour
     {
-        public GameObject[] blackChess = new GameObject[8];
-        public GameObject[] whiteChess = new GameObject[8];
+        public Figure[] blackChess = new GameObject[8];
+        public Figure[] whiteChess = new GameObject[8];
 
         public GlobalChessGroup whGroup;
         public GlobalChessGroup blGroup;
@@ -25,7 +25,12 @@ namespace AAA_HOMEWORK.Scripts
 
             for (int i = 0; i < _amountCheesInGroup.Length; i++)
             {
-                _cheesInfos[i] = _amountCheesInGroup[i].getFigures();
+                _cheesInfos = _amountCheesInGroup[i].getFigures();
+            }
+
+            for (int i = 0; i < whiteChess.Length; i++)
+            {
+                whiteChess[i].model = _cheesInfos[i].GetMeshModel();
             }
             
         }

@@ -6,7 +6,10 @@ namespace AAA_HOMEWORK.Scripts
     public class CheesInfo : ScriptableObject
     {
         [SerializeField] private GameObject model;
-        
-        
+
+        public GameObject GetMeshModel()
+        {
+            return model;
+        }
     }
 }
