@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecad3cba1eda419684ed56a4979792ed, type: 3}
+  m_Name: ExplosionSounds
+  m_EditorClassIdentifier: 
+  id: ExplosionSound
+  sounds:
+  - {fileID: 11400000, guid: 578a9adc7597a484bb463baab347d23b, type: 2}
+  - {fileID: 11400000, guid: 7c4a3c021206d4025ace3dcc4f4e7e8d, type: 2}
+  - {fileID: 11400000, guid: f8e45b70fcee3424393765bb41621c66, type: 2}
