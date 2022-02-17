@@ -5,34 +5,37 @@ namespace AAA_HOMEWORK.Scripts
 {
     public class Chess_Init : MonoBehaviour
     {
-        public Figure[] blackChess = new GameObject[8];
-        public Figure[] whiteChess = new GameObject[8];
 
-        public GlobalChessGroup whGroup;
-        public GlobalChessGroup blGroup;
-        
-        private AmountCheesInGroup[] _amountCheesInGroup= new AmountCheesInGroup[6];
-        private CheesInfo[] _cheesInfos = new CheesInfo[16];
+        [SerializeField] private GameObject modelObj;
+        [SerializeField] private _Name _nameObj;
+        [SerializeField] private int idObj;
+        [SerializeField] private int x, y;
+
+        [SerializeField] private CheesInfo cheesInfo;
+        [SerializeField] private PositionScrpt posScr;
         private void Start()
         {
             ReciveChesData();
+            StandOnDesk();
+        }
+
+        private void StandOnDesk()
+        {
+            x = posScr.X;
+            y = posScr.Y;
+
+            Instantiate(modelObj, new Vector3(x*100, 0, y*100), Quaternion.identity);
         }
 
         private void ReciveChesData()
         {
-
-        _amountCheesInGroup = whGroup.GetWhiteGroup().getFiguresWithColor(); //6 белых групп
-
-            for (int i = 0; i < _amountCheesInGroup.Length; i++)
-            {
-                _cheesInfos = _amountCheesInGroup[i].getFigures();
-            }
-
-            for (int i = 0; i < whiteChess.Length; i++)
-            {
-                whiteChess[i].model = _cheesInfos[i].GetMeshModel();
-            }
+            modelObj = cheesInfo.Model;
+            _nameObj = cheesInfo.Name;
+            idObj = cheesInfo.ID;
+           
             
         }
+
+
     }
 }
