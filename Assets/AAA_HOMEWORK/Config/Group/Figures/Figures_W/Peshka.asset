@@ -10,8 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7492b17db61e46adbea0526be4ce8d2d, type: 3}
-  m_Name: QEEN
+  m_Name: Peshka
   m_EditorClassIdentifier: 
-  model: {fileID: 100000, guid: 8d213db23e89f6b4fa3d427f07a32b13, type: 3}
-  _name: 1
-  id: 1
+  model: {fileID: 100000, guid: 1ae3b6cad3254b848942cea678f244c7, type: 3}
